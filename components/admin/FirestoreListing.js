@@ -1,7 +1,6 @@
 import { Box, Input, Typography } from "@mui/material";
 import React, { useState } from "react";
 import useGetImages from "../../hooks/useGetImages";
-import theme from "../../styles/themes/theme";
 import FirestoreListingItem from "./FirestoreListingItem";
 
 const FirestoreListing = ({
@@ -27,13 +26,13 @@ const FirestoreListing = ({
     return (
         <Box
             sx={{
-                backgroundColor: theme.palette.background.accent,
+                backgroundColor: "lightblue",
                 padding: "1em",
                 borderRadius: "5px",
                 height: "100%",
             }}
         >
-            <Typography variant="h3">
+            <Typography variant="h3" sx={{ color: "black" }}>
                 Update or delete item in {folder}.
             </Typography>
             <Box sx={{ display: "flex", alignItems: "end", gap: ".5em" }}>

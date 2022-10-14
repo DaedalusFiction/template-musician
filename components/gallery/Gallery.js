@@ -67,9 +67,6 @@ const Gallery = ({ images }) => {
 
     return (
         <Box sx={{ padding: "3rem 0" }}>
-            <Typography variant="h4" sx={{ textAlign: "center" }}>
-                Images
-            </Typography>
             <Grid container spacing={2}>
                 {columns &&
                     columns.length > 0 &&

@@ -52,7 +52,7 @@ theme = createTheme(theme, {
             // color: theme.palette.primary.off,
             fontWeight: "400",
             lineHeight: ".85em",
-            fontSize: "clamp(3.5rem, 5vw, 7rem)",
+            fontSize: "clamp(3.5rem, 8vw, 9rem)",
             letterSpacing: ".025em",
         },
         h2: {

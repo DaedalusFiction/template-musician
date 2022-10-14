@@ -6,6 +6,7 @@ import login from "../../utility/login.js";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../firebase.js";
 import FirebaseUploadForm from "../../components/admin/FirebaseUploadForm.js";
+import FirebaseUploadEvent from "../../components/admin/FirebaseUploadEvent.js";
 import FirestoreListing from "../../components/admin/FirestoreListing.js";
 import { contributorConfig, eventConfig, galleryConfig } from "../../siteInfo";
 import PageLayout from "../../components/layout/PageLayout.js";
@@ -46,7 +47,7 @@ const Admin = () => {
                                 <Grid item xs={12} md={6}>
                                     <FirebaseUploadForm
                                         config={galleryConfig}
-                                        folder="publications"
+                                        folder="gallery"
                                         updateCounter={updateCounter}
                                         setUpdateCounter={setUpdateCounter}
                                     />
@@ -54,13 +55,13 @@ const Admin = () => {
                                 <Grid item xs={12} md={6}>
                                     <FirestoreListing
                                         // category={galleryConfig.category}
-                                        folder="publications"
+                                        folder="gallery"
                                         updateCounter={updateCounter}
                                         setUpdateCounter={setUpdateCounter}
                                     />
                                 </Grid>
                                 <Grid item xs={12} md={6}>
-                                    <FirebaseUploadForm
+                                    <FirebaseUploadEvent
                                         config={eventConfig}
                                         folder="events"
                                         updateCounter={updateCounter}

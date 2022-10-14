@@ -9,7 +9,7 @@ import Image from "next/image";
 import EventImage from "./EventImage";
 import { formatDate } from "../../utility/general.js";
 
-const EventItem = ({ fields, image, isPreview }) => {
+const EventItem = ({ fields, isPreview }) => {
     const title = fields[0].value;
     const start = fields[1].value;
     const end = fields[2].value;
@@ -28,9 +28,6 @@ const EventItem = ({ fields, image, isPreview }) => {
                 }}
             >
                 <Grid container spacing={8}>
-                    <Grid item xs={12} sm={5}>
-                        <Box>{image && <EventImage image={image} />}</Box>
-                    </Grid>
                     <Grid item xs={12} sm={7}>
                         <Box
                             sx={{

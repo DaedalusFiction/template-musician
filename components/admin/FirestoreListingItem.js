@@ -1,7 +1,7 @@
 import { Box, IconButton, TextField, Typography } from "@mui/material";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { deleteObject, ref } from "firebase/storage";
+import { deleteObject, getStorage, ref } from "firebase/storage";
 import { db, storage } from "../../firebase";
 import { deleteDoc, doc, setDoc } from "firebase/firestore";
 import { useState } from "react";
@@ -37,7 +37,6 @@ const FirestoreListingItem = ({
         urls.forEach((url) => {
             deleteObject(ref(storage, url));
         });
-        deleteObject(ref(storage, image.data().markdownURL));
         await deleteDoc(doc(db, folder, image.id));
         setUpdateCounter(updateCounter + 1);
         setShownImages([]);
@@ -109,13 +108,13 @@ const FirestoreListingItem = ({
                                 />
                             );
                         })}
-                    {image && folder === "gallery" && (
+                    {/* {image && folder === "gallery" && (
                         <FirebaseCategorySelect
                             formData={formData}
                             setFormData={setFormData}
                             galleryCategories={galleryCategories}
                         />
-                    )}
+                    )} */}
                     <Box
                         sx={{
                             display: "flex",

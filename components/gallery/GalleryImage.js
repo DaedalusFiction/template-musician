@@ -8,30 +8,20 @@ const GalleryImage = ({ image, category, subCategory }) => {
 
     return (
         <Box>
-            <Link href={`/gallery/${category}/${subCategory}/${image.id}`}>
-                <Box
-                    className="link"
-                    sx={{
-                        transition: "300ms",
-                        "&:hover": { filter: "brightness(60%)" },
-                    }}
-                >
-                    <Image
-                        src={image.URLs[0]}
-                        blurDataURL={image}
-                        placeholder="blur"
-                        //has to be unoptimized to work with firebase storage, apparently
-                        unoptimized
-                        width="100"
-                        height={100 / ratio}
-                        onLoadingComplete={({ naturalWidth, naturalHeight }) =>
-                            setRatio(naturalWidth / naturalHeight)
-                        }
-                        layout="responsive"
-                        alt={image.description}
-                    />
-                </Box>
-            </Link>
+            <Image
+                src={image.URLs[0]}
+                blurDataURL={image}
+                placeholder="blur"
+                //has to be unoptimized to work with firebase storage, apparently
+                unoptimized
+                width="100"
+                height={100 / ratio}
+                onLoadingComplete={({ naturalWidth, naturalHeight }) =>
+                    setRatio(naturalWidth / naturalHeight)
+                }
+                layout="responsive"
+                alt={image.description}
+            />
         </Box>
     );
 };

@@ -8,7 +8,6 @@ import AboutNavbar from "../../components/about/AboutNavbar";
 const index = () => {
     return (
         <PageLayout name="ABOUT">
-            <AboutNavbar />
             <Box className="section">
                 <Grid container spacing={6}>
                     <Grid item xs={12} md={6}>
@@ -29,7 +28,7 @@ const index = () => {
                         <Typography sx={{ whiteSpace: "pre-wrap" }}>
                             {aboutContent.content}
                         </Typography>
-                        {/* <Box
+                        <Box
                             sx={{
                                 display: "flex",
                                 gap: "1em",
@@ -48,7 +47,7 @@ const index = () => {
                                     </Link>
                                 );
                             })}
-                        </Box> */}
+                        </Box>
                     </Grid>
                 </Grid>
             </Box>

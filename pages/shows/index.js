@@ -4,7 +4,7 @@ import PageLayout from "../../components/layout/PageLayout";
 
 const index = () => {
     return (
-        <PageLayout name="EVENTS">
+        <PageLayout name="Shows">
             <EventsItems />
         </PageLayout>
     );

@@ -14,15 +14,15 @@ import lightTheme from "./styles/themes/theme";
 
 // 1. Meta
 
-const siteName = "SICKTOOTH";
+const siteName = "MUSICIAN";
 // const siteName = "Cosima Hewes";
 
 // 2. Layout
 
 const navbar = {
     buttonOne: {
-        text: "Subscribe",
-        href: "/subscribe",
+        text: "book us!",
+        href: "/contact",
         variant: "outlined",
     },
 };
@@ -359,19 +359,7 @@ const galleryCategories = [
 const galleryConfig = {
     categories: [],
     subCategories: [],
-    fields: [
-        { name: "Title", type: "text", value: "" },
-        { name: "Author", type: "text", value: "" },
-        {
-            name: "Hook",
-            type: "text",
-            value: "",
-            multiline: true,
-            rows: 4,
-        },
-        { name: "Published", type: "number", value: "" },
-        { name: "Artist", type: "text", value: "" },
-    ],
+    fields: [{ name: "Title", type: "text", value: "" }],
 };
 
 const subscribeConfig = {
@@ -398,21 +386,20 @@ const aboutContent = {
         url: "/images/about1.webp",
         alt: "Moses Striking the Rock, by Joachim Anthonisz Wetwael",
     },
-    name: "OUR ROOTS",
+    name: "Good times, great music",
     buttons: [
         {
-            text: "Button Text",
-            href: "/about/masthead",
+            text: "book an event",
+            href: "/book",
             variant: "contained",
         },
         {
-            text: "Button Text",
-            href: "/about/missionstatement",
+            text: "contact us",
+            href: "/contact",
             variant: "contained",
         },
     ],
-    content:
-        "SICKTOOTH was founded in 2022 by failed novelist David Sorensen, who decided that he could do more good in this world by creating a platform on which to publish other writers than he ever could by simply writing things himself. \n\nPublishing fiction, poetry, creative non-fiction, and art, SICKTOOTH strives to publish the best content we can find, particulary that by previously unpublished artists and writers. \n\nThe name SICKTOOTH doesn't really have any particular significance; we just thought it sounded cool. Oh, and on that point, we think semicolons are just fine (when used in moderation).",
+    content: "This is the about section",
 };
 
 const leadProfile = {
@@ -533,7 +520,7 @@ const eventConfig = {
             multiline: true,
             rows: 4,
         },
-        { name: "Venue Website", type: "text", value: "" },
+        { name: "Venue Website", type: "text", value: "https://" },
     ],
     timeUploaded: new Date(),
 };
@@ -585,46 +572,27 @@ const imageSubmissionsConfig = {
 };
 
 const pages = [
-    // {
-    //     name: "issues",
-    //     href: "/issues",
-    //     subPages: [
-    //         { name: "Latest", href: "/issues/latest" },
-    //         { name: "Archive", href: "/issues/archive" },
-    //     ],
-    // },
     {
-        name: "fiction",
-        href: "/publications/fiction",
+        name: "shows",
+        href: "/shows",
         subPages: [],
     },
     {
-        name: "poetry",
-        href: "/publications/poetry",
+        name: "music",
+        href: "/music",
         subPages: [],
     },
     {
-        name: "articles",
-        href: "/publications/articles",
+        name: "gallery",
+        href: "/gallery",
         subPages: [],
     },
-    {
-        name: "contributors",
-        href: "/contributors",
-        subPages: [],
-    },
+
     {
         name: "about",
         href: "/about",
-        subPages: [
-            { name: "Masthead", href: "/about/masthead" },
-            {
-                name: "Mission Statement",
-                href: "/about/missionstatement",
-            },
-        ],
+        subPages: [],
     },
-    { name: "submissions", href: "/submissions", subPages: [] },
 ];
 
 const videos = [
