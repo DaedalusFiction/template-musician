@@ -39,6 +39,7 @@ const FirebaseUploadForm = ({
         addDoc(collection(db, folder), {
             ...formData,
             dateUploaded: Date.now(),
+            startDate: formData.fields[1].value,
         });
 
         //check to see if document with selected Title already exists

@@ -7,4 +7,9 @@ const formatDate = (date) => {
     });
 };
 
-export { formatDate };
+const formatHtmlDate = (date) => {
+    const dateArray = date.split("-");
+    return `${dateArray[1]}/${dateArray[2]}/${dateArray[0]}`;
+};
+
+export { formatDate, formatHtmlDate };

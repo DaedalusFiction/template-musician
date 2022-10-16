@@ -76,7 +76,7 @@ theme = createTheme(theme, {
             letterSpacing: ".025em",
             fontSize: "1.65rem",
             fontWeight: "600",
-            marginBottom: ".5em",
+            marginBottom: ".25em",
             // color: darkTheme.palette.custom.dark,
         },
         h5: {

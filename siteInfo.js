@@ -259,16 +259,22 @@ const blockPhotoContentTwo = {
 };
 
 const showcaseContentOne = {
-    title: "Cool Book Title",
-    subTitle: "Coming Soon",
+    title: "Cool Album Title",
+    subTitle: "Coming Soon:",
     image: { url: "/images/placeholder.webp", alt: "alt placeholder text" },
-    quote: "Uncle Michael is so cool, he won a game of connect four in three moves",
+    quote: "This can be some flavor text, like a line from one of your songs",
     description:
         "This is the showcase description. This is where you can talk about what you're showcasing and tell people why they should be interested.",
     buttons: [
+        { variant: "contained", href: "/music", text: "listen" },
         { variant: "contained", href: "https://google.com", text: "Preorder" },
-        { variant: "contained", href: "/work", text: "View publications" },
     ],
+};
+
+const eventsPreviewContent = {
+    image: { url: "/images/placeholder.webp", alt: "alt placeholder text" },
+    title: "Upcoming Events",
+    buttons: [{ variant: "contained", href: "/shows", text: "All Shows" }],
 };
 
 // 4. Services
@@ -700,4 +706,5 @@ export {
     workContent,
     processSteps,
     publicationsContent,
+    eventsPreviewContent,
 };
