@@ -6,7 +6,11 @@ import NativeImage from "./NativeImage";
 
 const BlockPhoto = ({ blockPhotoContent, reverse }) => {
     return (
-        <Grid container wrap={reverse ? "wrap-reverse" : "wrap"}>
+        <Grid
+            className="section"
+            container
+            wrap={reverse ? "wrap-reverse" : "wrap"}
+        >
             <Grid item xs={12} md={6} order={reverse ? 1 : 0}>
                 <NativeImage image={blockPhotoContent.image} maxSize={2000} />
             </Grid>
@@ -24,11 +28,12 @@ const BlockPhoto = ({ blockPhotoContent, reverse }) => {
                     >
                         <Box>
                             <Typography>{blockPhotoContent.title}</Typography>
-                            <br />
-                            <Typography variant="h2">
+                            <Typography
+                                variant="h2"
+                                sx={{ marginBottom: ".5em" }}
+                            >
                                 {blockPhotoContent.content}
                             </Typography>
-                            <br />
                             <Box>
                                 <Link href={blockPhotoContent.button.href}>
                                     <Button

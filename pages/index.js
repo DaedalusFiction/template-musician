@@ -6,7 +6,7 @@ import Meta from "../components/home/Meta";
 import Hero from "../components/home/Hero";
 import theme from "../styles/themes/theme";
 import Showcase from "../components/home/Showcase";
-import { showcaseContentOne } from "../siteInfo";
+import { blockPhotoContentOne, showcaseContentOne } from "../siteInfo";
 import AboutPreview from "../components/home/AboutPreview";
 import {
     collection,
@@ -19,18 +19,18 @@ import {
 } from "firebase/firestore";
 import { db } from "../firebase";
 import EventsPreview from "../components/home/EventsPreview";
+import BlockPhoto from "../components/general/BlockPhoto";
 
 export default function Home({ events }) {
-    const today = new Date().toJSON().slice(0, 10);
     return (
         <Box>
             <Meta />
             <Hero />
-            <Container maxWidth="lg">
-                <Showcase showcaseContent={showcaseContentOne} />
-                <AboutPreview />
+            <Container maxWidth="xl" disableGutters>
+                {/* <Showcase showcaseContent={showcaseContentOne} /> */}
                 <EventsPreview events={events} />
-                <Typography>{today}</Typography>
+                <AboutPreview />
+                <BlockPhoto blockPhotoContent={blockPhotoContentOne} />
             </Container>
         </Box>
     );

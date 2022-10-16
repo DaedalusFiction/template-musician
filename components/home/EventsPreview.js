@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@mui/material";
+import { Container, Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 import useGetEvents from "../../hooks/useGetEvents";
@@ -14,38 +14,36 @@ const EventsPreview = ({ events }) => {
             className="section"
             sx={{ background: theme.palette.background.accent }}
         >
-            <Grid container spacing={4}>
-                <Grid item xs={12} md={5}>
-                    <Box
-                        sx={{
-                            display: "flex",
-                            justifyContent: "center",
-                            alignItems: "center",
-                            height: "100%",
-                            margin: "1rem",
-                        }}
-                    >
-                        <NativeImage
-                            image={eventsPreviewContent.image}
-                            maxSize={800}
-                        />
-                    </Box>
-                </Grid>
-                <Grid item xs={12} md={7}>
-                    <Typography variant="h3" sx={{ marginBottom: "1em" }}>
-                        {eventsPreviewContent.title}
-                    </Typography>
-                    {events.map((event, index) => {
-                        return (
-                            <Event
-                                key={index}
-                                fields={event.fields}
-                                isPreview
+            <Container maxWidth="lg">
+                <Typography
+                    variant="h2"
+                    component="h2"
+                    sx={{ marginBottom: "1em", textAlign: "center" }}
+                >
+                    {eventsPreviewContent.title}
+                </Typography>
+                <Grid container spacing={4} sx={{ position: "relative" }}>
+                    <Grid item xs={12} md={5}>
+                        <Box className="sticky">
+                            <NativeImage
+                                image={eventsPreviewContent.image}
+                                maxSize={800}
                             />
-                        );
-                    })}
+                        </Box>
+                    </Grid>
+                    <Grid item xs={12} md={7}>
+                        {events.map((event, index) => {
+                            return (
+                                <Event
+                                    key={index}
+                                    fields={event.fields}
+                                    isPreview
+                                />
+                            );
+                        })}
+                    </Grid>
                 </Grid>
-            </Grid>
+            </Container>
         </Box>
     );
 };

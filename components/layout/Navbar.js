@@ -255,7 +255,7 @@ const Navbar = () => {
                                             </Button>
                                         </Link>
                                     ))}
-                                    <SocialMediaIcons />
+                                    {/* <SocialMediaIcons /> */}
                                     <Link href={navbar.buttonOne.href}>
                                         <Button
                                             color="secondary"

@@ -6,18 +6,12 @@ import EventItem from "./EventItem";
 
 const EventsItems = () => {
     const [events] = useGetEvents("events");
-    const handle = () => {
-        console.log(events[0].data());
-    };
+
     return (
         <Container className="section" maxWidth="lg">
             <Grid container spacing={4}>
                 <Grid item xs={12} md={3}>
-                    <Typography
-                        variant="h3"
-                        onClick={handle}
-                        sx={{ marginBottom: ".5em" }}
-                    >
+                    <Typography variant="h3" sx={{ marginBottom: ".5em" }}>
                         Upcoming:
                     </Typography>
                 </Grid>

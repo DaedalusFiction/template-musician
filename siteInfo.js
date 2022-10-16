@@ -234,11 +234,11 @@ const mosaicSectionContentThree = {
 
 const blockPhotoContentOne = {
     background: lightTheme.palette.background.accentLight,
-    title: "BLOCK PHOTO TITLE",
-    content: "Block Photo One",
+    title: "Looking to jazz up your next event?",
+    content: "Book Us Today!",
     button: {
-        text: "Button Text",
-        href: "/about",
+        text: "Book Us!",
+        href: "/book",
         variant: "contained",
     },
     image: {
@@ -395,7 +395,7 @@ const aboutContent = {
     name: "Good times, great music",
     buttons: [
         {
-            text: "book an event",
+            text: "About",
             href: "/book",
             variant: "contained",
         },

@@ -29,7 +29,7 @@ const Hero = () => {
                     variant="h1"
                     sx={{ color: theme.palette.custom.light }}
                 >
-                    Ramona
+                    Artist Name
                 </Typography>
                 <br />
                 <Typography
@@ -42,9 +42,12 @@ const Hero = () => {
                 </Typography>
                 <Typography
                     variant="h3"
-                    sx={{ color: theme.palette.custom.light }}
+                    sx={{
+                        color: theme.palette.custom.light,
+                        textAlign: "center",
+                    }}
                 >
-                    Holy Smokes
+                    Backup Musicians
                 </Typography>
                 <br />
                 <SocialMediaIcons />
