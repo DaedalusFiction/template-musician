@@ -76,7 +76,7 @@ const FirestoreListingItem = ({
                     }}
                     onClick={handleExpand}
                 >
-                    <Typography>{image.data().id}</Typography>
+                    <Typography>{image.data().fields[0].value}</Typography>
                     <ExpandMoreIcon />
                 </Box>
             ) : (

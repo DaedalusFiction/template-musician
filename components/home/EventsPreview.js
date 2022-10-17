@@ -15,14 +15,39 @@ const EventsPreview = ({ events }) => {
             sx={{ background: theme.palette.background.accent }}
         >
             <Container maxWidth="lg">
+                <Box
+                    sx={{
+                        display: "flex",
+                        justifyContent: "center",
+                        // marginBottom: "2rem",
+                        transform: "scaleY(-1)",
+                    }}
+                >
+                    <NativeImage
+                        image={eventsPreviewContent.bigDividerImage}
+                        maxSize={350}
+                    />
+                </Box>
                 <Typography
                     variant="h2"
                     component="h2"
-                    sx={{ marginBottom: "1em", textAlign: "center" }}
+                    sx={{ marginBottom: ".25em", textAlign: "center" }}
                 >
                     {eventsPreviewContent.title}
                 </Typography>
-                <Grid container spacing={4} sx={{ position: "relative" }}>
+                <Box
+                    sx={{
+                        display: "flex",
+                        justifyContent: "center",
+                        marginBottom: "4rem",
+                    }}
+                >
+                    <NativeImage
+                        image={eventsPreviewContent.bigDividerImage}
+                        maxSize={350}
+                    />
+                </Box>
+                <Grid container spacing={6} sx={{ position: "relative" }}>
                     <Grid item xs={12} md={5}>
                         <Box className="sticky">
                             <NativeImage

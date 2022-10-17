@@ -3,13 +3,46 @@ import { Button, Container, Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import Link from "next/link";
 import NativeImage from "../../components/general/NativeImage";
-import { aboutContent } from "../../siteInfo";
+import { aboutContent, eventsPreviewContent } from "../../siteInfo";
 
 const AboutPreview = () => {
     return (
         <Box className="section">
             <Container maxWidth="lg">
-                <Grid container spacing={4}>
+                <Box
+                    sx={{
+                        display: "flex",
+                        justifyContent: "center",
+                        // marginBottom: "2rem",
+                        transform: "scaleY(-1)",
+                    }}
+                >
+                    <NativeImage
+                        image={eventsPreviewContent.bigDividerImage}
+                        maxSize={350}
+                    />
+                </Box>
+                <Typography
+                    variant="h2"
+                    component="h3"
+                    sx={{ textAlign: "center", marginBottom: ".25em" }}
+                >
+                    About Us
+                </Typography>
+                <Box
+                    sx={{
+                        display: "flex",
+                        justifyContent: "center",
+                        marginBottom: "4rem",
+                        // transform: "scaleY(-1)",
+                    }}
+                >
+                    <NativeImage
+                        image={eventsPreviewContent.bigDividerImage}
+                        maxSize={350}
+                    />
+                </Box>
+                <Grid container spacing={6}>
                     <Grid item xs={12} md={6}>
                         <Box
                             sx={{
@@ -20,7 +53,6 @@ const AboutPreview = () => {
                                 justifyContent: "center",
                             }}
                         >
-                            <Typography variant="h3">About Us</Typography>
                             <Typography>
                                 Lorem ipsum dolor sit amet consectetur
                                 adipisicing elit. Assumenda, fugiat ipsam. A

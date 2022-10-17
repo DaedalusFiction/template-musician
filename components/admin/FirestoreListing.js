@@ -18,7 +18,10 @@ const FirestoreListing = ({
             return;
         }
         let newShownImages = images.filter((image) =>
-            image.data().id.toLowerCase().includes(e.target.value.toLowerCase())
+            image
+                .data()
+                .fields[0].value.toLowerCase()
+                .includes(e.target.value.toLowerCase())
         );
         setShownImages(newShownImages);
     };

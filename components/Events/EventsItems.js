@@ -4,29 +4,13 @@ import React from "react";
 import useGetEvents from "../../hooks/useGetEvents";
 import EventItem from "./EventItem";
 
-const EventsItems = () => {
-    const [events] = useGetEvents("events");
-
+const EventsItems = ({ events }) => {
     return (
-        <Container className="section" maxWidth="lg">
-            <Grid container spacing={4}>
-                <Grid item xs={12} md={3}>
-                    <Typography variant="h3" sx={{ marginBottom: ".5em" }}>
-                        Upcoming:
-                    </Typography>
-                </Grid>
-                <Grid item xs={12} md={9}>
-                    {events &&
-                        events.map((event, index) => {
-                            return (
-                                <EventItem
-                                    key={index}
-                                    fields={event.data().fields}
-                                />
-                            );
-                        })}
-                </Grid>
-            </Grid>
+        <Container maxWidth="lg">
+            {events &&
+                events.map((event, index) => {
+                    return <EventItem key={index} fields={event.fields} />;
+                })}
         </Container>
     );
 };

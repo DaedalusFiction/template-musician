@@ -7,7 +7,7 @@ body {
 }
 
 :root {
-    --bg-success: #cbbbbe;
+    --bg-success: rgb(255, 236, 205);
     --bg-sucess: #6c5ddd;
 }
 

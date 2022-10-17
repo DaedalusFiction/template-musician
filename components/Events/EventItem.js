@@ -8,6 +8,8 @@ import GalleryImage from "../general/NativeImage";
 import Image from "next/image";
 import EventImage from "./EventImage";
 import { formatDate } from "../../utility/general.js";
+import { eventsPreviewContent } from "../../siteInfo";
+import { formatHtmlDate } from "../../utility/general.js";
 
 const EventItem = ({ fields, isPreview }) => {
     const title = fields[0].value;
@@ -38,13 +40,11 @@ const EventItem = ({ fields, isPreview }) => {
                             }}
                         >
                             <Box>
-                                <Typography variant="h5">
-                                    Upcoming Event:
-                                </Typography>
                                 <Typography variant="h2">{title}</Typography>
-                                <Typography variant="h4">{`${start} ${
-                                    end && "through"
-                                } ${end}`}</Typography>
+                                <Typography variant="h4">
+                                    {`${formatHtmlDate(start)}`}
+                                    {end && ` - ${formatHtmlDate(end)}`}
+                                </Typography>
                                 {
                                     <Typography variant="h5">{`${venue}${
                                         time && ","
@@ -85,7 +85,16 @@ const EventItem = ({ fields, isPreview }) => {
                         </Box>
                     </Grid>
                 </Grid>
-                {!isPreview && <Divider sx={{ margin: "3rem 0" }} />}
+                {!isPreview && (
+                    <Box sx={{ opacity: "70%", marginBottom: "1rem" }}>
+                        <Image
+                            src={eventsPreviewContent.dividerImage.url}
+                            height={80}
+                            width={1000}
+                            alt="divider"
+                        />
+                    </Box>
+                )}
             </Box>
         </Container>
     );

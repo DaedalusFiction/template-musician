@@ -271,8 +271,24 @@ const showcaseContentOne = {
     ],
 };
 
+const musicContent = {
+    songs: [
+        { url: "/songs/muskrat-ramble.mp3", name: "Muskrat Ramble" },
+        { url: "/songs/muskrat-ramble.mp3", name: "Muskrat Ramble" },
+        { url: "/songs/muskrat-ramble.mp3", name: "Muskrat Ramble" },
+    ],
+};
+
 const eventsPreviewContent = {
     image: { url: "/images/placeholder.webp", alt: "alt placeholder text" },
+    bigDividerImage: {
+        url: "/images/eventsBorder.svg",
+        alt: "alt placeholder text",
+    },
+    dividerImage: {
+        url: "/images/divider2.svg",
+        alt: "alt placeholder text",
+    },
     title: "Upcoming Events",
     buttons: [{ variant: "contained", href: "/shows", text: "All Shows" }],
 };
@@ -395,7 +411,7 @@ const aboutContent = {
     name: "Good times, great music",
     buttons: [
         {
-            text: "About",
+            text: "Book us!",
             href: "/book",
             variant: "contained",
         },
@@ -707,4 +723,5 @@ export {
     processSteps,
     publicationsContent,
     eventsPreviewContent,
+    musicContent,
 };

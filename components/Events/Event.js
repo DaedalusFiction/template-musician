@@ -4,6 +4,9 @@ import React from "react";
 import theme from "../../styles/themes/theme";
 import Link from "next/link";
 import { formatHtmlDate } from "../../utility/general";
+import { eventsPreviewContent } from "../../siteInfo";
+import NativeImage from "../../components/general/NativeImage";
+import Image from "next/image";
 
 const EventItem = ({ fields, isPreview }) => {
     const title = fields[0].value;
@@ -27,6 +30,7 @@ const EventItem = ({ fields, isPreview }) => {
                     flexDirection: "column",
                     justifyContent: "space-between",
                     height: "100%",
+                    margin: { xs: "0", md: "0 2rem" },
                 }}
             >
                 <Box>
@@ -58,7 +62,14 @@ const EventItem = ({ fields, isPreview }) => {
                     <Link href={website}>Venue Website</Link>
                 </Box>
             </Box>
-            <Divider sx={{ margin: !isPreview ? "3rem 0" : "1rem 0" }} />
+            <Box sx={{ opacity: "70%", margin: "1rem 0" }}>
+                <Image
+                    src={eventsPreviewContent.dividerImage.url}
+                    height={100}
+                    width={1000}
+                    alt="divider"
+                />
+            </Box>
         </Box>
     );
 };

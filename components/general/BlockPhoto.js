@@ -7,9 +7,9 @@ import NativeImage from "./NativeImage";
 const BlockPhoto = ({ blockPhotoContent, reverse }) => {
     return (
         <Grid
-            className="section"
             container
             wrap={reverse ? "wrap-reverse" : "wrap"}
+            sx={{ backgroundColor: theme.palette.background.accent }}
         >
             <Grid item xs={12} md={6} order={reverse ? 1 : 0}>
                 <NativeImage image={blockPhotoContent.image} maxSize={2000} />
