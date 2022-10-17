@@ -44,7 +44,6 @@ const ContactForm = ({ config }) => {
                 display: "flex",
                 flexDirection: "column",
                 gap: "1em",
-                minWidth: "45ch",
             }}
         >
             {!isSubmitted ? (
