@@ -4,44 +4,16 @@ import { Box } from "@mui/system";
 import Link from "next/link";
 import NativeImage from "../../components/general/NativeImage";
 import { aboutContent, eventsPreviewContent } from "../../siteInfo";
+import DecorativeHeader from "../general/DecorativeHeader";
 
 const AboutPreview = () => {
     return (
         <Box className="section">
             <Container maxWidth="lg">
-                <Box
-                    sx={{
-                        display: "flex",
-                        justifyContent: "center",
-                        // marginBottom: "2rem",
-                        transform: "scaleY(-1)",
-                    }}
-                >
-                    <NativeImage
-                        image={eventsPreviewContent.bigDividerImage}
-                        maxSize={350}
-                    />
-                </Box>
-                <Typography
-                    variant="h2"
-                    component="h3"
-                    sx={{ textAlign: "center", marginBottom: ".25em" }}
-                >
-                    About Us
-                </Typography>
-                <Box
-                    sx={{
-                        display: "flex",
-                        justifyContent: "center",
-                        marginBottom: "4rem",
-                        // transform: "scaleY(-1)",
-                    }}
-                >
-                    <NativeImage
-                        image={eventsPreviewContent.bigDividerImage}
-                        maxSize={350}
-                    />
-                </Box>
+                <DecorativeHeader
+                    text="ABOUT US"
+                    image={eventsPreviewContent.bigDividerImage}
+                />
                 <Grid container spacing={6}>
                     <Grid item xs={12} md={6}>
                         <Box

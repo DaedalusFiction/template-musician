@@ -6,7 +6,7 @@ import Meta from "../components/home/Meta";
 import Hero from "../components/home/Hero";
 import theme from "../styles/themes/theme";
 import Showcase from "../components/home/Showcase";
-import { blockPhotoContentOne, showcaseContentOne } from "../siteInfo";
+import { blockPhotoContentOne, musicPreviewContent } from "../siteInfo";
 import AboutPreview from "../components/home/AboutPreview";
 import {
     collection,
@@ -20,6 +20,7 @@ import {
 import { db } from "../firebase";
 import EventsPreview from "../components/home/EventsPreview";
 import BlockPhoto from "../components/general/BlockPhoto";
+import MusicPreview from "../components/home/MusicPreview";
 
 export default function Home({ events }) {
     return (
@@ -27,7 +28,10 @@ export default function Home({ events }) {
             <Meta />
             <Hero />
             <Container maxWidth="xl" disableGutters>
-                {/* <Showcase showcaseContent={showcaseContentOne} /> */}
+                <MusicPreview
+                    musicPreviewContent={musicPreviewContent}
+                    variation={1}
+                />
                 <EventsPreview events={events} />
                 <AboutPreview />
                 <BlockPhoto blockPhotoContent={blockPhotoContentOne} />

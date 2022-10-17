@@ -13,14 +13,9 @@ const index = () => {
                         <Typography variant="h3">Get in Touch</Typography>
                         <br />
                         <Typography>
-                            Have a comment or suggestion? Feel a strong urge to
-                            tell us how much you like or hate one of our
-                            stories? Just want to shoot the shit? Send us a
-                            comment!
-                        </Typography>
-                        <br />
-                        <Typography>
-                            Or email us at daedalusfiction@gmail.com.
+                            Interested in booking a show? Have a question? Let
+                            us know what we can help you with in the comment
+                            box, and we will get back to you soon!
                         </Typography>
                     </Grid>
                     <Grid item xs={12} md={6}>

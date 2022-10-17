@@ -267,7 +267,7 @@ const Navbar = () => {
                                 </Box>
                             </Grid>
                         </Grid>
-                        {expanded && (
+                        {/* {expanded && (
                             <Box sx={{ padding: ".5rem 0" }}>
                                 <Divider />
                                 <Fade in={expanded}>
@@ -340,7 +340,7 @@ const Navbar = () => {
                                     </Grid>
                                 </Fade>
                             </Box>
-                        )}
+                        )} */}
                     </Box>
                 </Container>
             </AppBar>

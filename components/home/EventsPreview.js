@@ -7,6 +7,7 @@ import Event from "../Events/Event";
 import EventItem from "../Events/EventItem";
 import NativeImage from "../../components/general/NativeImage";
 import { eventsPreviewContent } from "../../siteInfo";
+import DecorativeHeader from "../general/DecorativeHeader";
 
 const EventsPreview = ({ events }) => {
     return (
@@ -15,38 +16,10 @@ const EventsPreview = ({ events }) => {
             sx={{ background: theme.palette.background.accent }}
         >
             <Container maxWidth="lg">
-                <Box
-                    sx={{
-                        display: "flex",
-                        justifyContent: "center",
-                        // marginBottom: "2rem",
-                        transform: "scaleY(-1)",
-                    }}
-                >
-                    <NativeImage
-                        image={eventsPreviewContent.bigDividerImage}
-                        maxSize={350}
-                    />
-                </Box>
-                <Typography
-                    variant="h2"
-                    component="h2"
-                    sx={{ marginBottom: ".25em", textAlign: "center" }}
-                >
-                    {eventsPreviewContent.title}
-                </Typography>
-                <Box
-                    sx={{
-                        display: "flex",
-                        justifyContent: "center",
-                        marginBottom: "4rem",
-                    }}
-                >
-                    <NativeImage
-                        image={eventsPreviewContent.bigDividerImage}
-                        maxSize={350}
-                    />
-                </Box>
+                <DecorativeHeader
+                    text="UPCOMING EVENTS"
+                    image={eventsPreviewContent.bigDividerImage}
+                />
                 <Grid container spacing={6} sx={{ position: "relative" }}>
                     <Grid item xs={12} md={5}>
                         <Box className="sticky">

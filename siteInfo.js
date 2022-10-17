@@ -231,6 +231,30 @@ const mosaicSectionContentThree = {
         { url: "/images/placeholder.webp", alt: "alt placeholder text" },
     ],
 };
+const musicPreviewContent = {
+    backgroundColor: "white",
+    title: "Music Preview",
+    songs: [
+        { url: "/songs/muskrat-ramble.mp3", name: "Muskrat Ramble" },
+        { url: "/songs/muskrat-ramble.mp3", name: "Muskrat Ramble" },
+        { url: "/songs/muskrat-ramble.mp3", name: "Muskrat Ramble" },
+    ],
+    content:
+        "This is the music preview section. Here you can have up to three song to play with a link to the music page, where the rest of your music will be.",
+    button: {
+        text: "Listen",
+        href: "/music",
+        variant: "contained",
+    },
+    images: [
+        { url: "/images/placeholder.webp", alt: "alt placeholder text" },
+        { url: "/images/placeholder.webp", alt: "alt placeholder text" },
+        { url: "/images/placeholder.webp", alt: "alt placeholder text" },
+        { url: "/images/placeholder.webp", alt: "alt placeholder text" },
+        { url: "/images/placeholder.webp", alt: "alt placeholder text" },
+        { url: "/images/placeholder.webp", alt: "alt placeholder text" },
+    ],
+};
 
 const blockPhotoContentOne = {
     background: lightTheme.palette.background.accentLight,
@@ -724,4 +748,5 @@ export {
     publicationsContent,
     eventsPreviewContent,
     musicContent,
+    musicPreviewContent,
 };

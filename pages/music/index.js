@@ -5,6 +5,7 @@ import ReactAudioPlayer from "react-audio-player";
 import { Grid, Typography } from "@mui/material";
 import { Box, Container } from "@mui/system";
 import Image from "next/image";
+
 const index = () => {
     return (
         <PageLayout name="Music">
