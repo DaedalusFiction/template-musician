@@ -8,7 +8,7 @@ import AboutNavbar from "../../../components/about/AboutNavbar";
 const index = () => {
     return (
         <PageLayout name="MASTHEAD">
-            <AboutNavbar />
+            {/* <AboutNavbar /> */}
             <Box className="section">
                 <Grid container spacing={6}>
                     <Grid item xs={12} md={6}>
