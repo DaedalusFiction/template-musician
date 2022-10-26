@@ -12,7 +12,7 @@ const Hero = () => {
         <Box
             className="section"
             sx={{
-                backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/images/placeholder.webp)`,
+                backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(/images/hero2.webp)`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
             }}
@@ -29,7 +29,7 @@ const Hero = () => {
                     variant="h1"
                     sx={{ color: theme.palette.custom.light }}
                 >
-                    Artist Name
+                    Musician Template
                 </Typography>
                 <br />
                 <Typography
@@ -47,7 +47,7 @@ const Hero = () => {
                         textAlign: "center",
                     }}
                 >
-                    Backup Musicians
+                    Band Name
                 </Typography>
                 <br />
                 <SocialMediaIcons />
